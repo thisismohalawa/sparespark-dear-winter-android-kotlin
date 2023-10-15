@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/weather_location">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:disableDependentsState="true"
+            android:key="USE_DEVICE_LOCATION"
+            android:summary="@string/allow_the_app_to_get_your_location"
+            android:title="@string/use_device_location" />
+
+        <EditTextPreference
+            android:defaultValue="Egypt"
+            android:dependency="USE_DEVICE_LOCATION"
+            android:key="CUSTOM_LOCATION"
+            android:summary="@string/the_location_for_which_the_weather_is_displayed"
+            android:title="@string/location" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

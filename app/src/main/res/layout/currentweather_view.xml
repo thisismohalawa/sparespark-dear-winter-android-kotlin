@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/_20sdp"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingEnd="@dimen/_20sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf">
+
+        <include
+            android:id="@+id/item_user_data"
+            layout="@layout/item_user_data" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15sdp" />
+
+        <include
+            android:id="@+id/item_temp_data"
+            layout="@layout/item_temp_data" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
